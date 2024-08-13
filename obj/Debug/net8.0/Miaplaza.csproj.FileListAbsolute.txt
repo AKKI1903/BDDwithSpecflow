@@ -117,3 +117,4 @@ C:\Users\ankushsharma\MiaplazaAutomation\obj\Debug\net8.0\refint\Miaplaza.dll
 C:\Users\ankushsharma\MiaplazaAutomation\obj\Debug\net8.0\Miaplaza.pdb
 C:\Users\ankushsharma\MiaplazaAutomation\obj\Debug\net8.0\Miaplaza.genruntimeconfig.cache
 C:\Users\ankushsharma\MiaplazaAutomation\obj\Debug\net8.0\ref\Miaplaza.dll
+C:\Users\ankushsharma\MiaplazaAutomation\bin\Debug\net8.0\specflow.json

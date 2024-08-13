@@ -1,3 +1,4 @@
+@KeepBrowserOpen
 Feature: Apply to Online High School!
 	Automating the flow to apply to the MiaPrepOHS
 

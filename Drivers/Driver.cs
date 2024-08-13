@@ -1,30 +1,45 @@
-using System;
 using OpenQA.Selenium;
-using TechTalk.SpecFlow;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
-
+using System;
 
 namespace Miaplaza.Drivers
 {
     public static class DriverHelper
     {
-        public static IWebDriver GetDriver(ScenarioContext scenarioContext)
+        private static IWebDriver _driver;
+
+        public static void InitializeDriver()
         {
-            return scenarioContext["WebDriver"] as IWebDriver;
+            if (_driver == null)
+            {
+                _driver = new ChromeDriver();
+                _driver.Manage().Window.Maximize();
+            }
         }
 
-        public static void QuitDriver(ScenarioContext scenarioContext)
+        public static IWebDriver GetDriver()
         {
-            var driver = GetDriver(scenarioContext);
-            driver?.Quit();
+            if (_driver == null)
+            {
+                InitializeDriver();
+            }
+            return _driver;
         }
 
-        public static T WaitUntil<T>(ScenarioContext scenarioContext, Func<IWebDriver, T> condition, int timeoutSeconds = 10)
+        public static void QuitDriver()
         {
-            var driver = GetDriver(scenarioContext);
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutSeconds));
+            if (_driver != null)
+            {
+                _driver.Quit();
+                _driver = null;
+            }
+        }
+
+        public static T WaitUntil<T>(Func<IWebDriver, T> condition, int timeoutSeconds = 10)
+        {
+            var wait = new WebDriverWait(GetDriver(), TimeSpan.FromSeconds(timeoutSeconds));
             return wait.Until(condition);
         }
-
     }
 }

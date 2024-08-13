@@ -1,6 +1,7 @@
 using TechTalk.SpecFlow;
 using OpenQA.Selenium.Chrome;
 using Miaplaza.Drivers;
+using System;
 
 
 namespace Miaplaza.Hooks
@@ -15,20 +16,33 @@ namespace Miaplaza.Hooks
             _scenarioContext = scenarioContext;
         }
 
+        [BeforeTestRun]
+        public static void BeforeTestRun()
+        {
+            DriverHelper.InitializeDriver();
+        }
+
+        [AfterTestRun]
+        public static void AfterTestRun()
+        {
+            DriverHelper.QuitDriver();
+        }
+
         [BeforeScenario]
         public void BeforeScenario()
         {
-/*             var options = new ChromeOptions();
-            options.AddArgument("--start-maximized"); */
-            var driver = new ChromeDriver();
+            var driver = DriverHelper.GetDriver();
             driver.Manage().Window.Maximize();
             _scenarioContext["WebDriver"] = driver;
         }
 
-        [AfterScenario]
+        /* [AfterScenario]
         public void AfterScenario()
         {
-            DriverHelper.QuitDriver(_scenarioContext);
-        }
+            if (!Array.Exists(_scenarioContext.ScenarioInfo.Tags, tag => tag == "KeepBrowserOpen"))
+            {
+                DriverHelper.QuitDriver();
+            }
+        } */
     }
 }
