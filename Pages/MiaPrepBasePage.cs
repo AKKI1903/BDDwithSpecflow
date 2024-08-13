@@ -15,19 +15,27 @@ namespace Miaplaza.Pages
             Driver = driver;
         }
 
-        public void NavigateToHomepage()
-        {
-            Driver.Navigate().GoToUrl("https://miaprep.com/online-school/"); // Replace with actual URL
-        }
-
         public void ClickApplyNowButton()
         {
-            Driver.FindElement(By.Id("apply-now-button")).Click(); // Replace with actual locator
-        }
+            try
+            {
+                // Get the WebDriver instance
+                var driver = DriverHelper.GetDriver();
 
-        public bool IsOnHomePage()
-        {
-            return Driver.Url.Contains("miaprep.com/online-school/");
+                // Wait for the element to be clickable and then click it
+                var applyNowLink = DriverHelper.WaitUntil(d => d.FindElement(By.LinkText("Apply Now")));
+                applyNowLink.Click();
+
+                // Optional: Add a short wait or verification step
+                DriverHelper.WaitUntil(d => d.Url.Contains("zohopublic.com"));
+
+                Console.WriteLine("Successfully clicked on the Apply Now button");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error clicking on Apply Now button: {ex.Message}");
+                throw; // Re-throw the exception to fail the test
+            }
         }
     }
 }

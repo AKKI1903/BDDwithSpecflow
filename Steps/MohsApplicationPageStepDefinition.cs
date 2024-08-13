@@ -37,7 +37,7 @@ namespace Miaplaza.StepDefinitions
         [When(@"I click on the Apply Now button")]
         public void WhenIclickonthebutton()
         {
-            _scenarioContext.Pending();
+            _basePage.ClickApplyNowButton();
         }
 
         [Then(@"the application form should be displayed")]
