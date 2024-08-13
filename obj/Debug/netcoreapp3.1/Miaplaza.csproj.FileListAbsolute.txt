@@ -110,3 +110,8 @@ c:\Users\ankushsharma\MiaplazaAutomation\obj\Debug\netcoreapp3.1\Miaplaza.csproj
 c:\Users\ankushsharma\MiaplazaAutomation\obj\Debug\netcoreapp3.1\Miaplaza.dll
 c:\Users\ankushsharma\MiaplazaAutomation\obj\Debug\netcoreapp3.1\Miaplaza.pdb
 c:\Users\ankushsharma\MiaplazaAutomation\obj\Debug\netcoreapp3.1\Miaplaza.genruntimeconfig.cache
+C:\Users\ankushsharma\MiaplazaAutomation\obj\Debug\netcoreapp3.1\Miaplaza.sourcelink.json
+C:\Users\ankushsharma\MiaplazaAutomation\bin\Debug\netcoreapp3.1\selenium-manager\linux\selenium-manager
+C:\Users\ankushsharma\MiaplazaAutomation\bin\Debug\netcoreapp3.1\selenium-manager\macos\selenium-manager
+C:\Users\ankushsharma\MiaplazaAutomation\bin\Debug\netcoreapp3.1\selenium-manager\windows\selenium-manager.exe
+C:\Users\ankushsharma\MiaplazaAutomation\bin\Debug\netcoreapp3.1\WebDriver.dll
