@@ -52,6 +52,40 @@ To run the tests, use the following command:
 
 This will execute all the tests defined in the project.
 
+
+## Reporting
+
+### Test Results
+
+To generate a test results file, you can use the --logger option when running tests:
+
+```bash
+dotnet test .\Miaplaza.csproj --logger "trx;LogFileName=testresults.trx,"
+```
+
+This will create a .trx file in the TestResults directory, which can be opened with Visual Studio or other test result viewers.
+
+### LivingDoc HTML Report
+
+SpecFlow provides a feature called LivingDoc that generates an HTML report from your feature files and test results. To generate this report:
+
+1. Install the SpecFlow.Plus.LivingDocPlugin NuGet package if you haven't already:
+
+   ```bash
+   dotnet add package SpecFlow.Plus.LivingDocPlugin
+   ```
+
+2. Generate the LivingDoc HTML after Results.trx:
+
+   ```bash
+   livingdoc test-assembly Path\to\your\Spec.dll -t Path\to\Your\TestExecustion.json -o Path\to\Livingdoc.html
+   ```
+
+3. After the tests run, you'll find a LivingDoc.html file in the TestResults directory. This file provides a user-friendly view of your features, scenarios, and test results.
+
+To view the LivingDoc report, simply open the LivingDoc.html file in a web browser.
+
+
 ## Project Structure
 
 - **Pages**: Contains page object classes that encapsulate the functionality of each page in the Miaplaza application.
@@ -83,4 +117,3 @@ Feature: Student Information
 
 - [SpecFlow](https://specflow.org/)
 - [Selenium](https://www.selenium.dev/)
-```
