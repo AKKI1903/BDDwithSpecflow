@@ -2,7 +2,7 @@ using System;
 using TechTalk.SpecFlow;
 using Miaplaza.Pages;
 using Miaplaza.Drivers;
-using OpenQA.Selenium;
+using NUnit.Framework;
 
 namespace Miaplaza.StepDefinitions
 {
@@ -12,12 +12,16 @@ namespace Miaplaza.StepDefinitions
         private readonly ScenarioContext _scenarioContext;
 
         private readonly MiaPrepBasePage _basePage;
+        private readonly MOHSApplicationNotePage _notePage;
+        private readonly MOHSApplicationParentInfoPage _ParentInfoPage;
         private int _currentPageNumber = 0;
 
         public MohsApplicationPageStepDefinition(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
             _basePage = new MiaPrepBasePage(DriverHelper.GetDriver());
+            _notePage = new MOHSApplicationNotePage(DriverHelper.GetDriver());
+            _ParentInfoPage = new MOHSApplicationParentInfoPage(DriverHelper.GetDriver());
         }
 
         [Given(@"I am on the MiaPrep Homepage")]
@@ -46,30 +50,8 @@ namespace Miaplaza.StepDefinitions
         [Then(@"the application form should be displayed")]
         public void Thentheapplicationformshouldbedisplayed()
         {
-            By linkLocator = By.XPath("//a[@href='https://tally.so/r/wkZEer']//span[contains(text(), 'take this quiz')]");
-
-            bool isLinkVisible = DriverHelper.WaitUntil(driver =>
-            {
-                try
-                {
-                    var element = driver.FindElement(linkLocator);
-                    return element.Displayed && element.Enabled;
-                }
-                catch (NoSuchElementException)
-                {
-                    return false;
-                }
-                catch (StaleElementReferenceException)
-                {
-                    return false;
-                }
-            }, timeoutSeconds: 10);
-
-            if (!isLinkVisible)
-            {
-                throw new Exception("The 'take this quiz' link is not visible on the page.");
-            }
-           
+            
+           _notePage.InformationPage();
         }
 
         [When(@"I click on Next on the initial form")]
@@ -82,13 +64,15 @@ namespace Miaplaza.StepDefinitions
         [Then(@"I should be on the Parent Information Page")]
         public void ThenIshouldbeontheParentInformationPage()
         {
-            _scenarioContext.Pending();
+            Assert.IsTrue(_ParentInfoPage.IsOnParentInfoPage());
+            _ParentInfoPage.EnterDetails("Anthony", "Smith", "anthony.smith.1991.01@test.com", "1714445687");
         }
 
         [When(@"I complete the parent information and click Next")]
         public void WhenIcompletetheparentinformationandclick()
         {
-            _scenarioContext.Pending();
+            _basePage.ProceedToNextPage(_currentPageNumber);
+            _currentPageNumber++;
         }
 
         [Then(@"I should be on the Student Information Page")]

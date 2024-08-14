@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Miaplaza")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32352811e8ae09678a93e9016688cc61536b0127")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de3a452ec1a3e138a0e6048b7414d4265d47d652")]
 [assembly: System.Reflection.AssemblyProductAttribute("Miaplaza")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Miaplaza")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,26 +15,30 @@ namespace Miaplaza.Pages
             Driver = driver;
         }
 
-        public void ClickApplyNowButton()
+        public void InformationPage()
         {
-            try
+            By linkLocator = By.XPath("//a[@href='https://tally.so/r/wkZEer']//span[contains(text(), 'take this quiz')]");
+
+            bool isLinkVisible = DriverHelper.WaitUntil(driver =>
             {
-                // Get the WebDriver instance
-                var driver = DriverHelper.GetDriver();
+                try
+                {
+                    var element = driver.FindElement(linkLocator);
+                    return element.Displayed && element.Enabled;
+                }
+                catch (NoSuchElementException)
+                {
+                    return false;
+                }
+                catch (StaleElementReferenceException)
+                {
+                    return false;
+                }
+            }, timeoutSeconds: 10);
 
-                // Wait for the element to be clickable and then click it
-                var applyNowLink = DriverHelper.WaitUntil(d => d.FindElement(By.LinkText("Apply Now")));
-                applyNowLink.Click();
-
-                // Optional: Add a short wait or verification step
-                DriverHelper.WaitUntil(d => d.Url.Contains("zohopublic.com"));
-
-                Console.WriteLine("Successfully clicked on the Apply Now button");
-            }
-            catch (Exception ex)
+            if (!isLinkVisible)
             {
-                Console.WriteLine($"Error clicking on Apply Now button: {ex.Message}");
-                throw; // Re-throw the exception to fail the test
+                throw new Exception("The 'take this quiz' link is not visible on the page.");
             }
         }
     }
