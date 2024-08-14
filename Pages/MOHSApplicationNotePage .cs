@@ -1,7 +1,6 @@
 using System;
 using OpenQA.Selenium;
 using Miaplaza.Drivers;
-using TechTalk.SpecFlow;
 
 namespace Miaplaza.Pages
 {

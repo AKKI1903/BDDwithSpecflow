@@ -1,7 +1,5 @@
-using System;
 using OpenQA.Selenium;
 using Miaplaza.Drivers;
-using OpenQA.Selenium.Support.UI;
 
 namespace Miaplaza.Pages
 {

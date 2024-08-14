@@ -19,7 +19,6 @@ namespace Miaplaza.Pages
         IWebElement EmailField => Driver.FindElement(By.XPath("//input[@name='Email']"));
         IWebElement selectedFlag => Driver.FindElement(By.CssSelector("div.selected-flag"));
         IWebElement countryElement => Driver.FindElement(By.CssSelector("li.country[data-country-code='de']"));
-        
         IWebElement PhoneField => Driver.FindElement(By.XPath("//input[@id='PhoneNumber']"));
         IWebElement SecondParentInfoDropDown => Driver.FindElement(By.XPath("//span[@class='select2-selection select2-selection--single select2FormCont' and @role='combobox' and @aria-labelledby='select2-Dropdown-arialabel-container']"));
         IWebElement SecondParentInfoOptionNo => Driver.FindElement(By.XPath("//li[contains(@class, 'select2-results__option') and text()='No']"));

@@ -88,8 +88,6 @@ namespace Miaplaza.StepDefinitions
 
             // End the test by marking the scenario as complete 
             _scenarioContext["TestStatus"] = "Completed";
-
-            
         }
     }
 }

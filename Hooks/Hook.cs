@@ -1,8 +1,6 @@
 using TechTalk.SpecFlow;
 using Miaplaza.Drivers;
 
-
-
 namespace Miaplaza.Hooks
 {
     [Binding]
@@ -34,14 +32,5 @@ namespace Miaplaza.Hooks
             driver.Manage().Window.Maximize();
             _scenarioContext["WebDriver"] = driver;
         }
-
-        /* [AfterScenario]
-        public void AfterScenario()
-        {
-            if (!Array.Exists(_scenarioContext.ScenarioInfo.Tags, tag => tag == "KeepBrowserOpen"))
-            {
-                DriverHelper.QuitDriver();
-            }
-        } */
     }
 }

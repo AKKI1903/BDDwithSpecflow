@@ -7,33 +7,6 @@ namespace Miaplaza.Pages
 {
     public class HomePage
     {
-       // private readonly IWebDriver _driver;
-        /*  private readonly WebDriverWait _wait;
-
-
-         public HomePage(IWebDriver driver)
-         {
-             _driver = driver;
-             _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-         }
-  */
-          /*  public HomePage()
-         {
-             
-            _driver = DriverHelper.GetDriver();
-         } */
-        //  private readonly ScenarioContext _scenarioContext;
-
-        //public HomePage(ScenarioContext scenarioContext)
-        // {
-        //     _scenarioContext = scenarioContext;
-
-
-        /* private IWebElement MiaPrepLink => DriverHelper.WaitUntil(_scenarioContext,
-            driver => driver.FindElement(By.LinkText("Online High School")));
-
-           private IWebElement MiaPrepLink => _wait.Until(driver => driver.FindElement(By.LinkText("Online High School")));
-*/
         //Launching the Mia Academywebsite
         public void NavigateToHomePage()
         {

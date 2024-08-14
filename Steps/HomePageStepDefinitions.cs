@@ -10,16 +10,6 @@ namespace Miaplaza.StepDefinitions
     [Binding]
     public class HomepageStepDefinition
     {
-        /* private readonly ScenarioContext _scenarioContext;
-        private readonly IWebDriver _driver;
-        private readonly HomePage _homePage;
-
-         public StepDefinitions(ScenarioContext scenarioContext)
-    {
-        _scenarioContext = scenarioContext;
-        _driver = DriverHelper.GetDriver(scenarioContext);
-        _homePage = new HomePage(_driver);
-    } */
         private readonly ScenarioContext _scenarioContext;
         private readonly HomePage _homePage;
         private readonly IWebDriver _driver;
@@ -30,7 +20,6 @@ namespace Miaplaza.StepDefinitions
             _driver = DriverHelper.GetDriver();
             _homePage = new HomePage();
         }
-
 
         [Given(@"I am on the MiaAcademy Home page")]
         public void GivenIamontheMiaAcademyHomepage()
