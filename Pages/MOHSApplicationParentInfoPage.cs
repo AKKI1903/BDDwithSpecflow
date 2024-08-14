@@ -25,7 +25,7 @@ namespace Miaplaza.Pages
         IWebElement SecondParentInfoOptionNo => Driver.FindElement(By.XPath("//li[contains(@class, 'select2-results__option') and text()='No']"));
         IWebElement PreferredStartDateField => Driver.FindElement(By.XPath("//input[@id='Date-date']"));
         IWebElement HeardBySearchEngine => Driver.FindElement(By.CssSelector("[for='Checkbox_1']"));
-        IWebElement OtherSocialMedia => Driver.FindElement(By.CssSelector("[for='Checkbox_10']"));
+        IWebElement MiaWebsite => Driver.FindElement(By.CssSelector("[for='Checkbox_2']"));
         public bool IsOnParentInfoPage()
         {
             return DriverHelper.WaitUntil(driver =>
@@ -50,8 +50,8 @@ namespace Miaplaza.Pages
             SecondParentInfoOptionNo.Click();
 
             HeardBySearchEngine.Click();
-            OtherSocialMedia.Click();
-            DateTime nexttwoWeeks = DateTime.Today.AddDays(14);
+            MiaWebsite.Click();
+            DateTime nexttwoWeeks = DateTime.Today.AddDays(15);
             string date = nexttwoWeeks.ToString("dd-MMM-yyyy");
             PreferredStartDateField.SendKeys(date);
         }

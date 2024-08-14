@@ -1,7 +1,6 @@
 using TechTalk.SpecFlow;
-using OpenQA.Selenium.Chrome;
 using Miaplaza.Drivers;
-using System;
+
 
 
 namespace Miaplaza.Hooks

@@ -14,6 +14,7 @@ namespace Miaplaza.StepDefinitions
         private readonly MiaPrepBasePage _basePage;
         private readonly MOHSApplicationNotePage _notePage;
         private readonly MOHSApplicationParentInfoPage _ParentInfoPage;
+        private readonly MOHSApplicationStudentInfoPage _StudentInfoPage;
         private int _currentPageNumber = 0;
 
         public MohsApplicationPageStepDefinition(ScenarioContext scenarioContext)
@@ -22,6 +23,7 @@ namespace Miaplaza.StepDefinitions
             _basePage = new MiaPrepBasePage(DriverHelper.GetDriver());
             _notePage = new MOHSApplicationNotePage(DriverHelper.GetDriver());
             _ParentInfoPage = new MOHSApplicationParentInfoPage(DriverHelper.GetDriver());
+            _StudentInfoPage = new MOHSApplicationStudentInfoPage(DriverHelper.GetDriver());
         }
 
         [Given(@"I am on the MiaPrep Homepage")]
@@ -50,8 +52,8 @@ namespace Miaplaza.StepDefinitions
         [Then(@"the application form should be displayed")]
         public void Thentheapplicationformshouldbedisplayed()
         {
-            
-           _notePage.InformationPage();
+
+            _notePage.InformationPage();
         }
 
         [When(@"I click on Next on the initial form")]
@@ -78,7 +80,16 @@ namespace Miaplaza.StepDefinitions
         [Then(@"I should be on the Student Information Page")]
         public void ThenIshouldbeontheStudentInformationPage()
         {
-            _scenarioContext.Pending();
+            bool isStudentPageVisible = _StudentInfoPage.IsStudentInfoPageVisible();
+            Assert.IsTrue(isStudentPageVisible, "Student Information Page header is not visible.");
+
+            // If we've reached this point, the test has passed
+            Console.WriteLine("Test completed successfully: Student Information Page is visible.");
+
+            // End the test by marking the scenario as complete 
+            _scenarioContext["TestStatus"] = "Completed";
+
+            
         }
     }
 }
