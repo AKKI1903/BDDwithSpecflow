@@ -41,5 +41,18 @@ namespace Miaplaza.Drivers
             var wait = new WebDriverWait(GetDriver(), TimeSpan.FromSeconds(timeoutSeconds));
             return wait.Until(condition);
         }
+
+        public static void WaitAndClick(By by, int timeoutSeconds = 10)
+        {
+            var wait = new WebDriverWait(GetDriver(), TimeSpan.FromSeconds(timeoutSeconds));
+
+            IWebElement element = wait.Until(driver =>
+            {
+                var elementToClick = driver.FindElement(by);
+                return (elementToClick.Displayed && elementToClick.Enabled) ? elementToClick : null;
+            });
+            
+            element.Click();
+        }
     }
 }

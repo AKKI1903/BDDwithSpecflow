@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="3b6c2de5-fd89-4666-aa0f-66af20554bdb" name="ankushsharma@SIT-FJPBL13 2024-08-14 01:16:15" runUser="SIT-FJPBL13\ankushsharma" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2024-08-14T01:16:16.3476339+02:00" queuing="2024-08-14T01:16:16.3476344+02:00" start="2024-08-14T01:15:53.6794504+02:00" finish="2024-08-14T01:16:29.9407214+02:00" />
-  <TestSettings name="default" id="3c20d9b2-b9c1-45ec-8eae-0d9f64215dbe">
-    <Deployment runDeploymentRoot="ankushsharma_SIT-FJPBL13_2024-08-14_01_16_15" />
+<TestRun id="463008fc-0a73-4945-8ac9-24ccd09ef4a5" name="ankushsharma@SIT-FJPBL13 2024-08-14 02:22:21" runUser="SIT-FJPBL13\ankushsharma" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2024-08-14T02:22:21.7318592+02:00" queuing="2024-08-14T02:22:21.7318609+02:00" start="2024-08-14T02:21:56.5954050+02:00" finish="2024-08-14T02:22:32.1510766+02:00" />
+  <TestSettings name="default" id="be22218a-ed84-44da-9ad8-ddb2769d2a00">
+    <Deployment runDeploymentRoot="ankushsharma_SIT-FJPBL13_2024-08-14_02_22_21" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="c1d6889a-e6d3-4ed9-9334-9368debba9de" testId="018806d8-2e21-042f-fbfc-be3fdc1d2fd7" testName="NavigateThroughTheInitialApplicationProcess" computerName="SIT-FJPBL13" duration="00:00:08.1892730" startTime="2024-08-14T01:16:15.3808392+02:00" endTime="2024-08-14T01:16:23.5701015+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1d6889a-e6d3-4ed9-9334-9368debba9de">
+    <UnitTestResult executionId="0213e4e7-8eb2-48ff-95b0-a0018996edaf" testId="018806d8-2e21-042f-fbfc-be3fdc1d2fd7" testName="NavigateThroughTheInitialApplicationProcess" computerName="SIT-FJPBL13" duration="00:00:09.0359280" startTime="2024-08-14T02:22:20.5746404+02:00" endTime="2024-08-14T02:22:29.6105682+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0213e4e7-8eb2-48ff-95b0-a0018996edaf">
       <Output>
         <StdOut>Given I am on the MiaPrep Homepage&#xD;
 -&gt; done: MohsApplicationPageStepDefinition.GivenIamontheMiaPrepHomepage() (0.2s)&#xD;
 When I click on the Apply Now button&#xD;
 Successfully clicked on the Apply Now button&#xD;
--&gt; done: MohsApplicationPageStepDefinition.WhenIclickonthebutton() (6.7s)&#xD;
+-&gt; done: MohsApplicationPageStepDefinition.WhenIclickonthebutton() (5.5s)&#xD;
 Then the application form should be displayed&#xD;
--&gt; pending: MohsApplicationPageStepDefinition.Thentheapplicationformshouldbedisplayed()&#xD;
+-&gt; done: MohsApplicationPageStepDefinition.Thentheapplicationformshouldbedisplayed() (1.5s)&#xD;
 When I click on Next on the initial form&#xD;
--&gt; skipped because of previous errors&#xD;
+-&gt; pending: MohsApplicationPageStepDefinition.WhenIclickonontheinitialform()&#xD;
 Then I should be on the Parent Information Page&#xD;
 -&gt; skipped because of previous errors&#xD;
 When I complete the parent information and click Next&#xD;
@@ -24,37 +24,37 @@ Then I should be on the Student Information Page&#xD;
 -&gt; skipped because of previous errors&#xD;
 &#xD;
 One or more step definitions are not implemented yet.&#xD;
-  MohsApplicationPageStepDefinition.Thentheapplicationformshouldbedisplayed()</StdOut>
+  MohsApplicationPageStepDefinition.WhenIclickonontheinitialform()</StdOut>
         <ErrorInfo>
           <Message>One or more step definitions are not implemented yet.&#xD;
-  MohsApplicationPageStepDefinition.Thentheapplicationformshouldbedisplayed()</Message>
+  MohsApplicationPageStepDefinition.WhenIclickonontheinitialform()</Message>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="b22044f2-9281-45a6-8144-6fd8d0362432" testId="c54db360-bebf-e797-02f5-d0d7e389911d" testName="ApplyToTheMiaPrepOHSAndRegistering" computerName="SIT-FJPBL13" duration="00:00:14.4461370" startTime="2024-08-14T01:16:00.9065339+02:00" endTime="2024-08-14T01:16:15.3525022+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b22044f2-9281-45a6-8144-6fd8d0362432">
+    <UnitTestResult executionId="8b82df69-e21e-45b8-b7b8-0e34d51ae2d8" testId="c54db360-bebf-e797-02f5-d0d7e389911d" testName="ApplyToTheMiaPrepOHSAndRegistering" computerName="SIT-FJPBL13" duration="00:00:13.0657440" startTime="2024-08-14T02:22:07.3795546+02:00" endTime="2024-08-14T02:22:20.4451299+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b82df69-e21e-45b8-b7b8-0e34d51ae2d8">
       <Output>
         <StdOut>Given I am on the MiaAcademy Home page&#xD;
--&gt; done: HomepageStepDefinition.GivenIamontheMiaAcademyHomepage() (8.1s)&#xD;
+-&gt; done: HomepageStepDefinition.GivenIamontheMiaAcademyHomepage() (5.8s)&#xD;
 When I Click on the banner for OHS&#xD;
--&gt; done: HomepageStepDefinition.WhenIClickonthebannerforOHS() (4.5s)&#xD;
+-&gt; done: HomepageStepDefinition.WhenIClickonthebannerforOHS() (6.4s)&#xD;
 Then I land on the MiaPrep Homepage&#xD;
--&gt; done: HomepageStepDefinition.ThenIlandontheMiaPrepHomepage() (0.9s)</StdOut>
+-&gt; done: HomepageStepDefinition.ThenIlandontheMiaPrepHomepage() (0.3s)</StdOut>
       </Output>
     </UnitTestResult>
   </Results>
   <TestDefinitions>
     <UnitTest name="NavigateThroughTheInitialApplicationProcess" storage="c:\users\ankushsharma\miaplazaautomation\bin\debug\net8.0\miaplaza.dll" id="018806d8-2e21-042f-fbfc-be3fdc1d2fd7">
-      <Execution id="c1d6889a-e6d3-4ed9-9334-9368debba9de" />
+      <Execution id="0213e4e7-8eb2-48ff-95b0-a0018996edaf" />
       <TestMethod codeBase="C:\Users\ankushsharma\MiaplazaAutomation\bin\Debug\net8.0\Miaplaza.dll" adapterTypeName="executor://nunit3testexecutor/" className="Miaplaza.Features.CompleteTheMOHSApplicationFeature" name="NavigateThroughTheInitialApplicationProcess" />
     </UnitTest>
     <UnitTest name="ApplyToTheMiaPrepOHSAndRegistering" storage="c:\users\ankushsharma\miaplazaautomation\bin\debug\net8.0\miaplaza.dll" id="c54db360-bebf-e797-02f5-d0d7e389911d">
-      <Execution id="b22044f2-9281-45a6-8144-6fd8d0362432" />
+      <Execution id="8b82df69-e21e-45b8-b7b8-0e34d51ae2d8" />
       <TestMethod codeBase="C:\Users\ankushsharma\MiaplazaAutomation\bin\Debug\net8.0\Miaplaza.dll" adapterTypeName="executor://nunit3testexecutor/" className="Miaplaza.Features.ApplyToOnlineHighSchoolFeature" name="ApplyToTheMiaPrepOHSAndRegistering" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="018806d8-2e21-042f-fbfc-be3fdc1d2fd7" executionId="c1d6889a-e6d3-4ed9-9334-9368debba9de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="c54db360-bebf-e797-02f5-d0d7e389911d" executionId="b22044f2-9281-45a6-8144-6fd8d0362432" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="018806d8-2e21-042f-fbfc-be3fdc1d2fd7" executionId="0213e4e7-8eb2-48ff-95b0-a0018996edaf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c54db360-bebf-e797-02f5-d0d7e389911d" executionId="8b82df69-e21e-45b8-b7b8-0e34d51ae2d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
@@ -67,21 +67,21 @@ Then I land on the MiaPrep Homepage&#xD;
 Running all tests in C:\Users\ankushsharma\MiaplazaAutomation\bin\Debug\net8.0\Miaplaza.dll&#xD;
    NUnit3TestExecutor discovered 2 of 2 NUnit test cases&#xD;
 Given I am on the MiaAcademy Home page&#xD;
--&gt; done: HomepageStepDefinition.GivenIamontheMiaAcademyHomepage() (8.1s)&#xD;
+-&gt; done: HomepageStepDefinition.GivenIamontheMiaAcademyHomepage() (5.8s)&#xD;
 When I Click on the banner for OHS&#xD;
--&gt; done: HomepageStepDefinition.WhenIClickonthebannerforOHS() (4.5s)&#xD;
+-&gt; done: HomepageStepDefinition.WhenIClickonthebannerforOHS() (6.4s)&#xD;
 Then I land on the MiaPrep Homepage&#xD;
--&gt; done: HomepageStepDefinition.ThenIlandontheMiaPrepHomepage() (0.9s)&#xD;
+-&gt; done: HomepageStepDefinition.ThenIlandontheMiaPrepHomepage() (0.3s)&#xD;
 &#xD;
 Given I am on the MiaPrep Homepage&#xD;
 -&gt; done: MohsApplicationPageStepDefinition.GivenIamontheMiaPrepHomepage() (0.2s)&#xD;
 When I click on the Apply Now button&#xD;
 Successfully clicked on the Apply Now button&#xD;
--&gt; done: MohsApplicationPageStepDefinition.WhenIclickonthebutton() (6.7s)&#xD;
+-&gt; done: MohsApplicationPageStepDefinition.WhenIclickonthebutton() (5.5s)&#xD;
 Then the application form should be displayed&#xD;
--&gt; pending: MohsApplicationPageStepDefinition.Thentheapplicationformshouldbedisplayed()&#xD;
+-&gt; done: MohsApplicationPageStepDefinition.Thentheapplicationformshouldbedisplayed() (1.5s)&#xD;
 When I click on Next on the initial form&#xD;
--&gt; skipped because of previous errors&#xD;
+-&gt; pending: MohsApplicationPageStepDefinition.WhenIclickonontheinitialform()&#xD;
 Then I should be on the Parent Information Page&#xD;
 -&gt; skipped because of previous errors&#xD;
 When I complete the parent information and click Next&#xD;
@@ -90,7 +90,7 @@ Then I should be on the Student Information Page&#xD;
 -&gt; skipped because of previous errors&#xD;
 &#xD;
 NavigateThroughTheInitialApplicationProcess: One or more step definitions are not implemented yet.&#xD;
-  MohsApplicationPageStepDefinition.Thentheapplicationformshouldbedisplayed()&#xD;
+  MohsApplicationPageStepDefinition.WhenIclickonontheinitialform()&#xD;
 NUnit Adapter 3.17.0.0: Test execution complete&#xD;
 </StdOut>
     </Output>

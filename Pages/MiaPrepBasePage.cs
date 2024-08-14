@@ -2,7 +2,7 @@ using System;
 using OpenQA.Selenium;
 using Miaplaza.Drivers;
 using TechTalk.SpecFlow;
-//This file contains the web elements and functions of the Mia Academy homepage
+
 namespace Miaplaza.Pages
 {
     public class MiaPrepBasePage
@@ -36,6 +36,13 @@ namespace Miaplaza.Pages
                 Console.WriteLine($"Error clicking on Apply Now button: {ex.Message}");
                 throw; // Re-throw the exception to fail the test
             }
+        }
+
+        protected IWebElement NextBtn(int pageNum) =>
+            DriverHelper.GetDriver().FindElement(By.CssSelector($"[page_no='{pageNum}'] button[elname='next']"));
+        public void ProceedToNextPage(int currentPageNum)
+        {
+            DriverHelper.WaitAndClick(By.CssSelector($"[page_no='{currentPageNum}'] button[elname='next']"));
         }
     }
 }
